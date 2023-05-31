@@ -2,7 +2,11 @@ Snake game
 
 .
 
-Simple Snake game, run in console, with 3 types of fruits (N-normal S-speed G-2x Growth)
+Simple Snake game, with 3 types of fruits (N-normal S-speed G-2x Growth)
+
+.
+
+this is oop and it doesnt have gui for now instead it runs in console
 
 .
 
