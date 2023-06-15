@@ -3,9 +3,9 @@
 #include "collisions.h"
 #include "input.h"
 #include "Fruit.h"
-#include "Fruit2.h"
+#include "Big_fruit.h"
 #include "Speed_fruit.h"
-#include "Normal_fruit.h"
+#include "Default_fruit.h"
 using namespace std;
 
 enum class Direction
@@ -20,13 +20,43 @@ enum class Direction
 class game_model
 {
 public:
+    ///constructor funtion
     game_model(Snake& snake, Collisions& collisions, Input& input);
-    void start_values();//sets the starting values of the game
-    void fruit_operation(vector<pair<int, int>> snake);//if collisions with fruit occur, fruit is deleted, snake grows, points are added and new fruit is created
-    int get_fruit_type();//returns fruit type
-    int get_game_speed();//returns game speed
-    int get_points();//returns points
-    Fruit* fruit_object = nullptr; // Pointer to a Fruit object
+
+    /**
+    *sets the starting values of
+    * 
+    * points
+    * snake star position
+    * input
+    * starting fruit type
+    * and game speed
+    */
+    void start_values();
+
+    /**
+    *this functions is used if the snake eats a fruit
+    * 
+    * it grows a snake
+    * adds points
+    * sets game speed of eaten fruit
+    * spawns new fruit
+    * checks if the fruit spawned on the snake
+    * and if so corrects it
+    */
+    void fruit_operation(vector<pair<int, int>> snake);
+
+    ///returns fruit type
+    int get_fruit_type();
+
+    ///returns game speed
+    int get_game_speed();
+
+    ///returns points
+    int get_points();
+
+    ///Pointer to a Fruit object
+    Fruit* fruit_object = nullptr;
 
 private:
     int points;

@@ -5,9 +5,15 @@
 class Input
 {
 public:
-	void set_input();//setst the directions and checks for illigal turns
-	int get_direction();//returns the direction
-	void set_start_direction();//sets the start direction
+	///sets the directions and checks for illigal turns
+	void set_input();
+
+	///returns the direction of the snake
+	int get_direction();
+
+	///sets the start direction of the snake
+	void set_start_direction();
+
 private:
 	int direction;
 };

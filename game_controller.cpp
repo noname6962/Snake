@@ -5,23 +5,23 @@ game_controller::game_controller(game_model& model, game_view& view, Snake& snak
 
 void game_controller::launch()
 {
-    this->model.start_values();//seting up the game
-    auto start = chrono::steady_clock::now(); // get the start time
+    this->model.start_values();
+    auto start = chrono::steady_clock::now();
 
     while (this->collisions.check_snake_collision(this->snake.get_snakebody()) == 1)
     {
-        auto now = chrono::steady_clock::now(); // get the current time
-        auto elapsed = chrono::duration_cast<chrono::milliseconds>(now - start).count(); // calculate elapsed time in milliseconds
+        auto now = chrono::steady_clock::now();
+        auto elapsed = chrono::duration_cast<chrono::milliseconds>(now - start).count();
 
-        this->input.set_input(); // Get the direction from the user
+        this->input.set_input();
 
         if (elapsed == this->model.get_game_speed())
         {
-            start = now; // reset the start time
+            start = now;
             this->snake.move_snake();
-            if (this->collisions.check_fruit_collision(this->snake.get_snakebody(), this->model.fruit_object->get_fruit_x(), this->model.fruit_object->get_fruit_y()) == 1)//checking for fruit collision
+            if (this->collisions.check_fruit_collision(this->snake.get_snakebody(), this->model.fruit_object->get_fruit_x(), this->model.fruit_object->get_fruit_y()) == 1)
             {
-                this->model.fruit_operation(this->snake.get_snakebody());//executing everything connected to eaten fruit
+                this->model.fruit_operation(this->snake.get_snakebody());
             }
             this->view.drawBoard(this->snake.get_snakebody(), this->model.fruit_object->get_fruit_x(), this->model.fruit_object->get_fruit_y(), this->model.get_fruit_type(), this->model.get_points());
         }

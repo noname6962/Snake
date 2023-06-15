@@ -36,13 +36,13 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Normal_fruit.cpp">
+    <ClCompile Include="Default_fruit.cpp">
       <Filter>Source Files\Fruit</Filter>
     </ClCompile>
     <ClCompile Include="Speed_fruit.cpp">
       <Filter>Source Files\Fruit</Filter>
     </ClCompile>
-    <ClCompile Include="Fruit2.cpp">
+    <ClCompile Include="Big_fruit.cpp">
       <Filter>Source Files\Fruit</Filter>
     </ClCompile>
     <ClCompile Include="Fruit.cpp">
@@ -74,7 +74,7 @@
     <ClInclude Include="Fruit.h">
       <Filter>Header Files\Fruit</Filter>
     </ClInclude>
-    <ClInclude Include="Fruit2.h">
+    <ClInclude Include="Big_fruit.h">
       <Filter>Header Files\Fruit</Filter>
     </ClInclude>
     <ClInclude Include="game_controller.h">
@@ -89,7 +89,7 @@
     <ClInclude Include="Input.h">
       <Filter>Header Files\Program</Filter>
     </ClInclude>
-    <ClInclude Include="Normal_fruit.h">
+    <ClInclude Include="Default_fruit.h">
       <Filter>Header Files\Fruit</Filter>
     </ClInclude>
     <ClInclude Include="Snake.h">

@@ -1,26 +1,26 @@
 #include "Input.h"
 
-void Input::set_input()//set direction based on input
+void Input::set_input()
 {
-    if (GetAsyncKeyState(VK_UP) & 0x8000) {  // Up arrow key
+    if (GetAsyncKeyState(VK_UP) & 0x8000) {
         if (direction != 2)
         {
             direction = 1;
         }
     }
-    else if (GetAsyncKeyState(VK_DOWN) & 0x8000) {  // Down arrow key
+    else if (GetAsyncKeyState(VK_DOWN) & 0x8000) {
         if (direction != 1)
         {
             direction = 2;
         }
     }
-    else if (GetAsyncKeyState(VK_LEFT) & 0x8000) {  // Left arrow key
+    else if (GetAsyncKeyState(VK_LEFT) & 0x8000) {
         if (direction != 4)
         {
             direction = 3;
         }
     }
-    else if (GetAsyncKeyState(VK_RIGHT) & 0x8000) {  // Right arrow key
+    else if (GetAsyncKeyState(VK_RIGHT) & 0x8000) {
         if (direction != 3)
         {
             direction = 4;

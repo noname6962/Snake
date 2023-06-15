@@ -4,17 +4,16 @@
 
 using namespace std;
 
-const int width = 22; // Width of the game board
-const int height = 12; // Height of the game board
+/// width and height of the game board
+const int width = 22;
+const int height = 12;
 
-// Draw the game board
 void game_view::drawBoard(vector<pair<int, int>> snake, int fruit_x, int fruit_y, int fruit_type, int points)
 {
-    system("cls"); // Clear the console
+    system("cls");
 
     char board[height][width];
 
-    // Fill the board with dots
     for (int i = 0; i < height; i++)
     {
         for (int j = 1; j < width - 1; j++)
@@ -23,25 +22,26 @@ void game_view::drawBoard(vector<pair<int, int>> snake, int fruit_x, int fruit_y
         }
         for (int j = 0; j < width; j++)
         {
-            board[0][j] = '#'; // Top wall
-            board[height - 1][j] = '#'; // Bottom wall
+            board[0][j] = '#';
+            board[height - 1][j] = '#';
         }
         for (int i = 1; i < height - 1; i++)
         {
-            board[i][0] = '#'; // Left wall
-            board[i][width - 1] = '#'; // Right wall
+            board[i][0] = '#';
+            board[i][width - 1] = '#';
         }
     }
 
 
 
-    // Draw the fruit
-    //N - normal fruit
-    //S - speed fruit
-    //G - 2x growth fruit
+    /** Draw the fruit
+    *D - Default
+    *S - speed fruit
+    *B - Big fruit (2x growth)
+    */
     if (fruit_type == 1)
     {
-        board[fruit_y][fruit_x] = 'N';
+        board[fruit_y][fruit_x] = 'D';
     }
     else if (fruit_type == 2)
     {
@@ -49,11 +49,14 @@ void game_view::drawBoard(vector<pair<int, int>> snake, int fruit_x, int fruit_y
     }
     else if (fruit_type == 3)
     {
-        board[fruit_y][fruit_x] = 'G';
+        board[fruit_y][fruit_x] = 'B';
     }
 
 
-    // Draw the snake
+    /**
+    * 0 - head of the snake
+    * o - body of the snake
+    */
     for (int i = 0; i < snake.size(); i++)
     {
         int x = snake[i].first;
@@ -61,15 +64,14 @@ void game_view::drawBoard(vector<pair<int, int>> snake, int fruit_x, int fruit_y
 
         if (i == 0)
         {
-            board[y][x] = 'O'; // Head of the snake
+            board[y][x] = 'O';
         }
         else
         {
-            board[y][x] = 'o'; // Body of the snake
+            board[y][x] = 'o';
         }
     }
 
-    // Print the board
     for (int i = 0; i < height; i++)
     {
         for (int j = 0; j < width; j++)
