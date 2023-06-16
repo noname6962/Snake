@@ -8,11 +8,11 @@
 
 using namespace std;
 
-class game_controller
+class Game_controller
 {
 public:
     ///this function is the constructor for the game_controller class
-    game_controller(game_model& model, game_view& view, Snake& snake, Collisions& collisions, Input& input);
+    Game_controller(Game_model& model, Game_view& view, Snake& snake, Collisions& collisions, Input& input);
 
     /**
     * this function does  the main loop of the game
@@ -33,8 +33,8 @@ public:
     void launch();
 
 private:
-    game_model& model;
-    game_view& view;
+    Game_model& model;
+    Game_view& view;
     Snake& snake;
     Collisions& collisions;
     Input& input;

@@ -1,4 +1,4 @@
-#include "game_view.h"
+#include "Game_view.h"
 
 
 
@@ -8,7 +8,7 @@ using namespace std;
 const int width = 22;
 const int height = 12;
 
-void game_view::drawBoard(vector<pair<int, int>> snake, int fruit_x, int fruit_y, int fruit_type, int points)
+void Game_view::drawBoard(vector<pair<int, int>> snake, int fruit_x, int fruit_y, int fruit_type, int points)
 {
     system("cls");
 

@@ -1,9 +1,9 @@
-#include "game_model.h"
+#include "Game_model.h"
 
-game_model::game_model(Snake& snake, Collisions& collisions, Input& input) : snake(snake), input(input), collisions(collisions) {
+Game_model::Game_model(Snake& snake, Collisions& collisions, Input& input) : snake(snake), input(input), collisions(collisions) {
 }
 
-void game_model::start_values()
+void Game_model::start_values()
 {
 	this->points = 1;
 	this->snake.start_snake();
@@ -17,7 +17,7 @@ void game_model::start_values()
 
 
 
-void game_model::fruit_operation(vector<pair<int, int>> snake) 
+void Game_model::fruit_operation(vector<pair<int, int>> snake) 
 {
 	this->snake.grow(fruit_object->get_grow_size());
 	if (fruit_object->get_grow_size() == 2)
@@ -69,17 +69,17 @@ void game_model::fruit_operation(vector<pair<int, int>> snake)
 
 }
 
-int game_model::get_fruit_type()
+int Game_model::get_fruit_type()
 {
 	return fruit_type;
 }
 
-int game_model::get_points()
+int Game_model::get_points()
 {
 	return points;
 }
 
-int game_model::get_game_speed()
+int Game_model::get_game_speed()
 {
 	return game_speed;
 }

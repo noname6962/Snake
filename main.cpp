@@ -1,17 +1,17 @@
 #include <iostream>
-#include "game_controller.h"
-#include "game_model.h"
-#include "game_view.h"
+#include "Game_controller.h"
+#include "Game_model.h"
+#include "Game_view.h"
 using namespace std;
 
 int main()
 {
-	game_view view;
+	Game_view view;
 	Collisions collisions;
 	Input input;
 	Snake snake(input);
-	game_model model(snake, collisions, input);
-	game_controller controller(model, view, snake, collisions, input);
+	Game_model model(snake, collisions, input);
+	Game_controller controller(model, view, snake, collisions, input);
 	controller.launch();
 	return 0;
 }

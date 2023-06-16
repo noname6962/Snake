@@ -17,11 +17,11 @@ enum class Direction
     Right
 };
 
-class game_model
+class Game_model
 {
 public:
     ///constructor funtion
-    game_model(Snake& snake, Collisions& collisions, Input& input);
+    Game_model(Snake& snake, Collisions& collisions, Input& input);
 
     /**
     *sets the starting values of

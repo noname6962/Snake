@@ -3,7 +3,7 @@
 #include <vector>
 using namespace std;
 
-class game_view
+class Game_view
 {
 public:
 	///this function draws the board

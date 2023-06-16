@@ -1,9 +1,9 @@
-#include "game_controller.h"
+#include "Game_controller.h"
 
-game_controller::game_controller(game_model& model, game_view& view, Snake& snake, Collisions& collisions, Input& input) : model(model), collisions(collisions), view(view), snake(snake), input(input) {
+Game_controller::Game_controller(Game_model& model, Game_view& view, Snake& snake, Collisions& collisions, Input& input) : model(model), collisions(collisions), view(view), snake(snake), input(input) {
 }
 
-void game_controller::launch()
+void Game_controller::launch()
 {
     this->model.start_values();
     auto start = chrono::steady_clock::now();
